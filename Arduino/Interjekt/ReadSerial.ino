@@ -1,22 +1,18 @@
-char string[] = "test,data";
-int x[2];
-int i = 0;
-String sx ="";
+int posit = 0;   // for incoming serial data
 
-void setup2()
-{
- char *p = string;
- char *str;
- Serial.begin(9600);
- while ((str = strtok_r(p, ",", &p)) != NULL){ // delimiter is the comma
-   sx += str;
-   x[i] = sx.toInt();
-   i++;
-   sx = "";
+void setupread() {
+        Serial.begin(9600);     // opens serial port, sets data rate to 9600 bps
 }
- 
-}
-void loop2() {
-  // put your main code here, to run repeatedly: 
-  
+
+void loopread() {
+
+        // send data only when you receive data:
+        if (Serial.available() > 0) {
+                // read the incoming byte:
+                posit = Serial.read();
+
+                // say what you got:
+                Serial.print("I received: ");
+                Serial.println(posit, DEC);
+        }
 }

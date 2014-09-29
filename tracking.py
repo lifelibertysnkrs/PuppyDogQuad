@@ -59,10 +59,10 @@ while True:
 			mean_x = image.width/2 
 			mean_y = image.height/2
 		
-		print ("Position is ", mean_x,", ", mean_y)
+		
 
-		statusx = (mean_x-image.width/2)/10
-		statusy = (mean_y-image.height/2)/10
+		statusx = (mean_x-image.width/2)/40+4
+		statusy = (mean_y-image.height/2)/40+3
 		statusxy = statusy*10+statusx
 
 		
@@ -77,6 +77,7 @@ while True:
 
 	# display the image on the viewer 
 	view.displayImage(image)
+	print(str(statusxy))
 	try:
 		ser.write(str(statusxy))
 	except:

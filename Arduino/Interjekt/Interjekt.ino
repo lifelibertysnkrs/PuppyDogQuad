@@ -7,7 +7,7 @@
 
 #include <Servo.h>
 Servo Throttle, Aile, Elev, Rudd, Aux1, Aux2;
-extern int x[2];
+extern int posit;
 //Create variables for 6 channels
 int RXCH[6]; 
 volatile int RXSG[6];
@@ -69,10 +69,12 @@ void loop() {
 //
 //Image Tracking (from Rasberry Pi)
   PWMSG[0] = 1500; 
-    
+  int x = posit%10-4;
+  int y = posit/10-3;
+  
   if(PWMSG[4]>1600){
-    PWMSG[0] += (x[0]);
-    PWMSG[1] += (x[1]);
+    PWMSG[0] += x;
+    PWMSG[1] += x;
     }
   
     
