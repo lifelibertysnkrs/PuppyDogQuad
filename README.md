@@ -9,13 +9,13 @@ Usage
 -----------------------
 
 Here's what you'll need to get started:
-
+```
 1 Quadcopter Frame (I used a Flamewheel 450)
 4x Motor's/ESC's (I used stock DJI Motors and opto 30 ESC's)
 1x Rasberry Pi (I used Model B+)
 1x Arduino Uno 
 1x Webcam (the higher res, the better)
-
+```
 First install the "motion" packages that allow the Raspberry pi to work with the Webcam.
 
 Next, instal the imgproc library on the Raspberry pi from: http://rahul.cc/docs/imgproc.zip
