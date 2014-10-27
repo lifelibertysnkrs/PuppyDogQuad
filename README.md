@@ -18,7 +18,7 @@ Here's what you'll need to get started:
 ```
 First install the "motion" packages that allow the Raspberry pi to work with the Webcam.
 
-Next, instal the imgproc library on the Raspberry pi from: http://rahul.cc/docs/imgproc.zip
+Next, install the imgproc library on the Raspberry pi from: http://rahul.cc/docs/imgproc.zip
 
 ```
 wget http://rahul.cc/docs/imgproc.zip
