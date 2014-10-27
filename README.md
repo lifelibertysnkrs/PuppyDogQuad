@@ -3,7 +3,12 @@ PuppyDogQuad
 
 An opensource system for image tracking quadcopters!
 
-PuppyDogQuad uses blob tracking to track colors and follow them. Here's what you'll need to get started:
+PuppyDogQuad uses blob tracking to track colors and follow them. 
+
+Usage
+-----------------------
+
+Here's what you'll need to get started:
 
 1 Quadcopter Frame (I used a Flamewheel 450)
 4x Motor's/ESC's (I used stock DJI Motors and opto 30 ESC's)
@@ -15,25 +20,28 @@ First install the "motion" packages that allow the Raspberry pi to work with the
 
 Next, instal the imgproc library on the Raspberry pi from: http://rahul.cc/docs/imgproc.zip
 
--------------------------------------
+```
 wget http://rahul.cc/docs/imgproc.zip
 unzip imgproc.zip
 cd library 
 sudo make install
 cd ..
--------------------------------------
+
+```
 
 Next, we need to set up the image tracking program itself. Download tracking.py and then do the following in terminal
 
--------------------------------------
+```
 crontab -e
--------------------------------------
+
+```
 
 add the following line to the file:
 
--------------------------------------
+```
 @reboot sudo python /[PATH]/tracking.py
--------------------------------------
+
+```
 
 where [PATH] is the path to tracking.py.
 
